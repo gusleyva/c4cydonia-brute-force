@@ -9,18 +9,18 @@ encrypted = open("hola.xls", "rb")
 file = msoffcrypto.OfficeFile(encrypted)
 
 def solve_password(maxrange):
-    isPasswordCracked = False
+    isCracked = False
     for i in range(0, maxrange + 1):
         print("Loop #: ", i)
-        if (isPasswordCracked):
+        if (isCracked):
             break
         for attempt in product(charset, repeat=i):
             tmpPass = ''.join(attempt)
             try:
-                file.load_key(tmpPass)  # Use password
+                file.load_key(tmpPass)  # Open the file using temporal password
                 print("Password correct: ", attempt) #Array
                 print("password: ", tmpPass) #String
-                isPasswordCracked = True
+                isCracked = True
                 break
             except:
                 print("Exception opening the file, password incorrect: ", attempt)
