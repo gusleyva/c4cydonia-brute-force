@@ -3,10 +3,10 @@
 ## Objective
 Crack a file with password using brute force algorithm.
 
-#Brute force algorithm
+# Brute force algorithm
 This video is for educational purposes, we are not responsible for the use.
 
-##Theory
+## Theory
 Brute force algorithm will iterate all possible combinations from an input charset until it crack the password or reach combination limit.
 
 #### Disadvantages
